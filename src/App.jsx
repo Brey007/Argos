@@ -4,7 +4,7 @@ import DashboardPage from "./features/dashboard/pages/dashboardPage";
 export default function App() {
   return (
     <Routes>
-      <Route path="/Dashboard" element={<DashboardPage />} />
+      <Route path="/dashboard" element={<DashboardPage />} />
     </Routes>
   )
 }
