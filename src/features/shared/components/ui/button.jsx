@@ -6,8 +6,8 @@ const base =
 
 const variants = {
   primary: "bg-gray-900 text-white hover:bg-gray-800 focus-visible:ring-2 focus-visible:ring-gray-900",
-  secondary: "bg-gray-100 text-gray-900 hover:bg-gray-200 focus-visible:ring-2 focus-visible:ring-gray-400",
-  ghost: "bg-transparent text-gray-900 hover:bg-gray-100 focus-visible:ring-2 focus-visible:ring-gray-400",
+  secondary: "bg-gray-100 text-gray-200 hover:bg-gray-800 focus-visible:ring-2 focus-visible:ring-gray-400",
+  ghost: "bg-transparent text-gray-200 hover:bg-gray-800 focus-visible:ring-2 focus-visible:ring-gray-400",
   argos:  "bg-indigo-500/20 backdrop-blur-md text-white",
 };
 
