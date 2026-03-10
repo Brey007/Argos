@@ -3,7 +3,7 @@ import RootLayout from "../features/layouts/rootLayout";
 import HomePage from "../features/pages/homePage";
 import DashboardPage from "../features/dashboard/pages/dashboardPage";
 
-export const router = createBrowserRouter([
+const router = createBrowserRouter([
     {
         path: "/",
         element: <RootLayout />,
@@ -12,4 +12,6 @@ export const router = createBrowserRouter([
             { path: "dashboard", element: <DashboardPage /> }
         ]
     }
-])
+]);
+
+export default router;

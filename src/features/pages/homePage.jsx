@@ -1,5 +1,5 @@
-import Card from "../components/card";
-import Button from "../../shared/components/ui/button";
+import Card from "../shared/components/ui/card";
+import Button from "../shared/components/ui/button";
 
 export default function HomePage() {
     return (
