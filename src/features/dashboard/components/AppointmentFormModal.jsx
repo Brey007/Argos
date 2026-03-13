@@ -7,12 +7,12 @@ function isoToLocalInputValue (iso) {
     if (!iso) return "";
     const date = new Date(iso);
     const pad = (n) => String(n).padStart(2, "0");
-    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
 }
 
 function localInputValueToIso (local) {
-    if (!localValue) return "";
-    const d = new Date (localValue);
+    if (!local) return "";
+    const d = new Date(local);
     return d.toISOString();
 }
 
@@ -35,12 +35,12 @@ export default function AppointmentFormModal({
 
     useEffect(() => {
         if (!open) return;
-        if (isEdit && initialAppoiment) {
-            setClientId(initialAppoiment.clientId || "");
+        if (isEdit && initialAppointment) {
+            setClientId(initialAppointment.clientId || "");
             setDateTimeLocal(isoToLocalInputValue(initialAppointment.dateTime));
             setService(initialAppointment.service || "");
-            setNotes(initialAppoiment.notes || "");
-            setStatus(initialAppoiment.status || "");
+            setNotes(initialAppointment.notes || "");
+            setStatus(initialAppointment.status || "");
         } else {
             setClientId(clients?.[0]?.id || "");
             setDateTimeLocal("");

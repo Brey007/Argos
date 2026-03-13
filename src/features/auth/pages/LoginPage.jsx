@@ -20,7 +20,7 @@ export default function LoginPage () {
     const [formError, setFormError] = useState ("");
 
     const canSubmit = useMemo(() => {
-        return isValidEmail(email.trim()) && password.leng >= 8;
+        return isValidEmail(email.trim()) && password.length >= 8;
     }, [email, password]);
 
     async function onSubmit(e) {
@@ -33,9 +33,9 @@ export default function LoginPage () {
 
         setSubmitting(true);
         try {
-            await signInWithPassword(email.trim(), password);
+            await signInWithPassword({ email: email.trim(), password });
             navigate(from, { replace: true });
-        }catch (error) {
+        } catch (error) {
             setFormError(error?.message || "An error occurred during login. Please try again.");
         } finally {
             setSubmitting(false);

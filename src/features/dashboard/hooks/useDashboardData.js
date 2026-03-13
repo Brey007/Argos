@@ -31,8 +31,7 @@ export function useDashboardData({ userId }) {
         if (!alive) return;
         setError(e?.message || "Error loading the data.");
       } finally {
-        if (!alive) return;
-        setLoading(false);
+        if (alive) setLoading(false);
       }
     }
 

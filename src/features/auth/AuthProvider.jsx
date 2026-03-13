@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { supabase } from "../../lib/supabaseClient";
 
@@ -39,8 +40,8 @@ export function AuthProvider({ children }) {
 
     return () => {
       alive = false;
-      if (subscriptionRef?.subscription?.unsubscribe) {
-        subscriptionRef.subscription.unsubscribe();
+      if (subscriptionRef?.unsubscribe) {
+        subscriptionRef.unsubscribe();
       }
     };
   }, []);
