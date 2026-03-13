@@ -1,9 +1,5 @@
-import Button from "../../shared/components/ui/button";
-
-export default function () {
-    return (
-        <div className="mt-4 flex gap-2">
-            <Button onClick={() => window.alert("Demo: Accion wa")}> waza </Button>
-        </div>
-    )
-}
+import { useMemo, useState } from 'react';
+import { useAuth } from '../../auth/AuthProvider';
+import Spinner from '../../shared/components/ui/spinner';
+import Card from '../../shared/components/ui/card';
+import button from '../../shared/components/ui/button';
